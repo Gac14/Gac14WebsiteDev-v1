@@ -1,4 +1,4 @@
-package ca.Gac14;
+package tech.gac14.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
