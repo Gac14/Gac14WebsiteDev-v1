@@ -1,0 +1,52 @@
+<!doctype html>
+<html xmlns:th="https://www.thymeleaf.org"
+	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+	<title>Gac 14</title>
+</head>
+<body>
+
+	<div id = "Header">
+		<div id ="Title">
+			<H1>Gac 14 about Page</H1>
+		</div>
+				
+	</div>
+
+	<div id="LeftIndex">
+		<div id ="UserControl" >
+			
+			
+			<div th:switch="${#authorization.expression('hasRole(''USER'')')}"> 
+			  <p th:case="${false}"><a href="register">Register</a><br><a href="user">Login</a></p>
+			  
+			</div>
+			
+			<form sec:authorize="hasRole('USER')" action="#" th:action="@{/logout}" method="post">
+				<p><a href="/user">User Home</a></p>
+				<input type="submit" value="Logout" />
+			</form>
+		</div>
+		<p><a href="/">Home</a></p>
+		<p><a href="about.html">About</a></p>
+		
+	</div>
+
+	<div id = "Body">
+			<p>Main index</p>
+			<p>Test</p>
+			<div sec:authorize="hasRole('USER')">Text visible to user.<br><p>Logged user: <span sec:authentication="name"></span></p></div>
+			<p>This is where info about the site will go</p>
+	</div>
+
+	<div id="Footer">
+		<p>Footer</p>
+	</div>
+
+
+
+
+</body>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html xmlns:th="https://www.thymeleaf.org"
+	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+	<title>Gac 14</title>
+</head>
+<body>
+
+	<div id = "Header">
+		<div id ="Title">
+			<H1>Gac 14 Register new account</H1>
+		</div>
+				
+	</div>
+
+	<div id="LeftIndex">
+		<div id ="UserControl" >
+			<a href="user">Login</a>
+			<form sec:authorize="hasRole('USER')" action="#" th:action="@{/logout}" method="post">
+				<input type="submit" value="Logout" />
+			</form>
+		</div>
+		<p><a href="index.html">Home</a></p>
+		<p><a href="about.html">About</a></p>
+	</div>
+
+	<div id = "Body">
+			<p>Main index</p>
+			<p>Test</p>
+			<form action="#" th:action="@{/newUser}" th:object="${user}" method= "post">
+			
+				<p>Username: <input type= "text" id= "username" th:field= "*{username}" placeholder= "Username..."/></p>			
+				<p>Password: <input type= "password" id= "password" th:field= "*{pass}" placeholder= "Password"/></p>	
+				<p>Age:<input type="text" id= "age" th:field= "*{age}" placeholder = "0"></p>	
+			 	<p>Description: <input type="text" id="description" th:field= "*{description}" placeholder= "blah blah blah"/></p>
+			 	
+				<input type="submit" value= "Submit" >
+			</form>
+	</div>
+
+	<div id="Footer">
+		<p>Footer</p>
+	</div>
+
+
+
+
+</body>
