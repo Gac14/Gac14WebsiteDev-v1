@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import ca.Gac14.bean.Role;
-import ca.Gac14.bean.User;
-import ca.Gac14.dao.DAO;
+import tech.gac14.web.bean.Role;
+import tech.gac14.web.bean.User;
+import tech.gac14.web.dao.DAO;
 
 @Controller
 public class HomeController {

@@ -13,7 +13,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 
-import ca.Gac14.dao.DAO;
+import tech.gac14.web.dao.DAO;
 
 @Service
 public class UserDetailedSeviceImpl implements UserDetailsService {
@@ -23,7 +23,7 @@ public class UserDetailedSeviceImpl implements UserDetailsService {
 
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-		ca.Gac14.bean.User user = dao.findUser(username);
+        tech.gac14.web.bean.User user = dao.findUser(username);
 	       
         if (user == null) {
             System.out.println("User not found! " + username);

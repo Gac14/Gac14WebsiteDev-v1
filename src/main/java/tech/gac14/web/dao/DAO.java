@@ -14,7 +14,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Repository;
 
-import ca.Gac14.bean.User;
+import tech.gac14.web.bean.User;
 
 @Repository
 public class DAO {
