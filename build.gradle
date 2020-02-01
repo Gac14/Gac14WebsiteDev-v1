@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id "org.springframework.boot" version "2.2.4.RELEASE"
+    id "io.freefair.lombok" version "4.1.6"
 }
 
 group = 'tech.gac14.web'
@@ -19,15 +20,16 @@ repositories{
 
 
 dependencies{
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf'
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web'
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-security'
-    compile group: 'org.thymeleaf.extras', name: 'thymeleaf-extras-springsecurity5'
-    compileOnly group: 'org.projectlombok', name: 'lombok'
-    compile group: 'org.springframework', name: 'spring-jdbc'
-    compile group: 'org.springframework.security', name: 'spring-security-core'
-    runtimeOnly group: 'mysql', name: 'mysql-connector-java'
-    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: "2.2.4.RELEASE"
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: "2.2.4.RELEASE"
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: "2.2.4.RELEASE"
+    compile group: 'org.thymeleaf.extras', name: 'thymeleaf-extras-springsecurity5', version: "3.0.4.RELEASE"
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: "1.18.10"
+    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: "1.18.10"
+    compile group: 'org.springframework', name: 'spring-jdbc', version: "5.2.3.RELEASE"
+    compile group: 'org.springframework.security', name: 'spring-security-core', version: "5.2.1.RELEASE"
+    runtimeOnly group: 'mysql', name: 'mysql-connector-java', version: "8.0.19"
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: "2.2.4.RELEASE"
     compile group: 'github.chorman0773.sentry', name: 'sentry-authlib', version: "[0.1,2.0)"
 }
 
