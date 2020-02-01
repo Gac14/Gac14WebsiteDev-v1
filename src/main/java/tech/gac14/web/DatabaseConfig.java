@@ -22,10 +22,6 @@ public class DatabaseConfig {
     @Bean
     public DataSource dataSource(){
        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-       dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-       dataSource.setUrl("jdbc:mysql://localhost/gac14websitedev");
-       dataSource.setUsername( "root" );
-       dataSource.setPassword( "root" );
        return dataSource;
     }
 	
