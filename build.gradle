@@ -28,5 +28,6 @@ dependencies{
     compile group: 'org.springframework.security', name: 'spring-security-core'
     runtimeOnly group: 'mysql', name: 'mysql-connector-java'
     testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test'
+    compile group: 'github.chorman0773.sentry', name: 'sentry-authlib', version: "[0.1,2.0)"
 }
 
