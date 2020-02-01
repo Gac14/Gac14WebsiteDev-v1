@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id "org.springframework.boot" version "2.2.4.RELEASE"
+}
+
+group = 'tech.gac14.web'
+version = '1.0'
+
+repositories{
+    mavenLocal()
+    maven{
+        url = "https://lightningcreations.github.io/Maven"
+        name = "LightningCreations Maven"
+    }
+    jcenter()
+    mavenCentral()
+}
+
+
+
+dependencies{
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-security'
+    compile group: 'org.thymeleaf.extras', name: 'thymeleaf-extras-springsecurity5'
+    compileOnly group: 'org.projectlombok', name: 'lombok'
+    compile group: 'org.springframework', name: 'spring-jdbc'
+    compile group: 'org.springframework.security', name: 'spring-security-core'
+    runtimeOnly group: 'mysql', name: 'mysql-connector-java'
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test'
+}
+

@@ -1,7 +1,8 @@
 HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
-*.properties
+application.properties
+/.gradle
 
 ### STS ###
 .apt_generated
